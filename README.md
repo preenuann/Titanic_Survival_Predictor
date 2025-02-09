@@ -89,17 +89,17 @@ After evaluating the models, the **Random Forest** model was found to be the bes
 3. Loading the model using joblib
    import joblib
 
-# Load the saved model
+**Load the saved model**
   model = joblib.load('titanic_model.pkl')
 
-# Sample data for prediction
-# Format: [Pclass, Age, SibSp, Parch, Fare, Sex (0=female, 1=male), Embarked (0=C, 1=Q, 2=S)]
+**Sample data for prediction**
+**Format: [Pclass, Age, SibSp, Parch, Fare, Sex (0=female, 1=male), Embarked (0=C, 1=Q, 2=S)]**
   sample_data = [[3, 22, 1, 0, 7.25, 0, 0]]  # Replace this with the actual data you want to predict
 
-# Predict survival
+**Predict survival**
   prediction = model.predict(sample_data)
 
-# Output the prediction result
+**Output the prediction result**
   if prediction == 1:
       print("The passenger survived.")
   else:
